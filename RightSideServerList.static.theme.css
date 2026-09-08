@@ -27,20 +27,22 @@
 }
 
 .guilds__5e434 {
-    transform-origin: top right;
-    bottom: unset;
-    top: var(--custom-app-top-bar-height, 0px) !important;
-    right: 0 !important;
-    left: auto !important;
-    height: calc(100vh - var(--custom-app-top-bar-height, 0px)) !important;
-    width: var(--custom-guild-list-width, 72px) !important;
-    position: fixed !important;
-    margin: 0 !important;
+  transform-origin: top right;
+  bottom: unset;
+  top: var(--custom-app-top-bar-height, 0px) !important;
+  right: 0 !important;
+  left: auto !important;
+  height: calc(100vh - var(--custom-app-top-bar-height, 0px)) !important;
+  width: var(--custom-guild-list-width, 72px) !important;
+  position: fixed !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
 
-    & .itemsContainer_ef3116, & .stack_dbd263 {
-        flex-direction: column;
-        justify-content: var(--HSL-server-alignment);
-    }
+  & .itemsContainer_ef3116, & .stack_dbd263 {
+    flex-direction: column;
+    justify-content: var(--HSL-server-alignment);
+  }
 }
 
 .tree_ef3116 {
