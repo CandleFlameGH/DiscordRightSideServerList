@@ -7,25 +7,14 @@
  */
 
 :root {
-    --HSL-server-direction: if-this-crashes-then-i-know-to-keep-this-lmao; /* Direction of the server list. | OPTIONS: row, row-reverse | DEFAULT: row */
     --HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
-}
-
-/* --- src/main.css --- */
-:root {
     --notices-height: 36px;
     --serverlist-offset: var(--custom-guild-list-width);
 }
 
-..base__5e434[data-fullscreen="false"] .content__5e434 {
+.base__5e434[data-fullscreen="false"] .content__5e434 {
     margin-right: var(--serverlist-offset);
-    margin-top: calc(var(--custom-app-top-bar-height, 0px) + 30px) !important;
     overflow: visible !important;
-}
-
-/* When there IS a notice, remove the extra margin since the banner takes up space */
-.notice__6e2b9 + .content__5e434 {
-    margin-top: var(--custom-app-top-bar-height, 0px) !important;
 }
 
 :fullscreen .content__5e434 {
@@ -38,32 +27,20 @@
 }
 
 .guilds__5e434 {
-  transform-origin: top right;
-  bottom: unset;
-  top: var(--custom-app-top-bar-height, 0px) !important;
-  right: 0 !important;
-  left: auto !important;
-  height: calc(100vh - var(--custom-app-top-bar-height, 0px)) !important;
-  width: var(--custom-guild-list-width, 72px) !important;
-  position: fixed !important;
-  margin: 0 !important;
-  padding-top: 0;
+    transform-origin: top right;
+    bottom: unset;
+    top: var(--custom-app-top-bar-height, 0px) !important;
+    right: 0 !important;
+    left: auto !important;
+    height: calc(100vh - var(--custom-app-top-bar-height, 0px)) !important;
+    width: var(--custom-guild-list-width, 72px) !important;
+    position: fixed !important;
+    margin: 0 !important;
 
-  & .itemsContainer_ef3116, & .stack_dbd263 {
-    flex-direction: column;
-    justify-content: var(--HSL-server-alignment);
-  }
-}
-
-/* When a banner appears, ADD padding to push servers down */
-.notice__6e2b9 + .content__5e434 ~ .base__5e434 .guilds__5e434 {
-  padding-top: 30px;
-}
-
-/* Move out of notice banners [?] */
-.notice__6e2b9 + .content__5e434 {
-    margin-right: var(--serverlist-offset) !important;
-    margin-top: var(--notices-height) !important;
+    & .itemsContainer_ef3116, & .stack_dbd263 {
+        flex-direction: column;
+        justify-content: var(--HSL-server-alignment);
+    }
 }
 
 .tree_ef3116 {
@@ -72,21 +49,19 @@
 }
 
 .wrapper__6e9f8, .folderPreview__48112, .folderIconWrapper__48112, .lowerBadge_cc5dd2, .upperBadge_cc5dd2 {
-    /* rotate: 0deg; */
+    rotate: 0deg;
 }
 
 .childWrapper__6e9f8 {
-    /* rotate: 0deg; */
+    rotate: 0deg;
 }
 
 .notice__6e2b9 {
     height: var(--notices-height);
-    & + .content__5e434
 
-{
-    --serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
-}
-
+    & + .content__5e434 {
+        --serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
+    }
 }
 
 .container__5e434 > div[style]:not(.base__5e434) {
@@ -96,17 +71,12 @@
     position: absolute;
     width: 100vw !important;
     height: var(--serverlist-offset) !important;
-    & .guilds__5e434
 
-{
-    pointer-events: all;
-}
+    & .guilds__5e434 {
+        pointer-events: all;
+    }
 
-& + .base__5e434 .guilds__5e434 {
-    top: calc(var(--custom-app-top-bar-height, 0px) + var(--serverlist-offset)) !important;
-}
-
-& + .base__5e434 .content__5e434 {
-    margin-right: calc(var(--serverlist-offset) * 2);
-}
+    & + .base__5e434 .content__5e434 {
+        margin-right: calc(var(--serverlist-offset) * 2);
+    }
 }
