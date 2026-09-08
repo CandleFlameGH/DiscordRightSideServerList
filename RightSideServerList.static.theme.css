@@ -33,7 +33,7 @@
 
 .guilds__5e434 {
   transform-origin: top right;
-  bottom: 0;
+  bottom: unset;
   top: var(--custom-app-top-bar-height, 0px) !important;
   right: 0 !important;
   left: auto !important;
