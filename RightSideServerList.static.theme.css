@@ -34,12 +34,14 @@
 .guilds__5e434 {
     transform-origin: 0 0;
     bottom: unset;
-    right: 0;
     top: 0;
+    right: 0 !important;
+    left: auto !important;
     rotate: 0deg;
     height: 100vh !important; /* vh is the height, vw is the width. change this when moving the servers around */
-    width: var(--custom-guild-list-width, 72px);
-    position: absolute !important;
+    width: var(--custom-guild-list-width, 72px) !important;
+    position: fixed !important;
+    margin: 0 !important;
     
    & .itemsContainer_ef3116, & .stack_dbd263 {
     flex-direction: column;
