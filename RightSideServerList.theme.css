@@ -6,9 +6,8 @@
  * @source https://github.com/CandleFlameGH/DiscordRightSideServerList
  */
 
-@import url('https://candleflaegh.github.io/DiscordRightSideServerList/RightSideServerList.css');
+@import url('https://cdn.jsdelivr.net/gh/CandleFlameGH/DiscordRightSideServerList@deploy/RightSideServerList.static.theme.css');
 
 :root {
-	--HSL-server-direction: row; /* Direction of the server list. | OPTIONS: row, row-reverse | DEFAULT: row */
 	--HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
 }
