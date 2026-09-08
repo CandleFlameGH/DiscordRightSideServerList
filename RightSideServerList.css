@@ -5,7 +5,7 @@
 }
 
 .base__5e434[data-fullscreen="false"] .content__5e434 {
-  margin-top: var(--serverlist-offset);
+  margin-right: var(--serverlist-offset);
   overflow: visible !important;
 }
 
@@ -22,7 +22,7 @@
   transform-origin: 0 0;
   bottom: unset;
   left: 0;
-  rotate: -90deg;
+  rotate: 0deg;
   height: 100vw !important;
   position: absolute !important;
 
@@ -38,7 +38,7 @@
 }
 
 .wrapper__6e9f8, .folderPreview__48112, .folderIconWrapper__48112, .lowerBadge_cc5dd2, .upperBadge_cc5dd2 {
-  rotate: 90deg;
+  rotate: 0deg;
 }
 
 .childWrapper__6e9f8 {
@@ -66,6 +66,6 @@
   }
 
   & + .base__5e434 .content__5e434 {
-    margin-top: calc(var(--serverlist-offset) * 2);
+    margin-right: calc(var(--serverlist-offset) * 2);
   }
 }
