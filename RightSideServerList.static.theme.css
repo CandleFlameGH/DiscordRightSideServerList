@@ -64,9 +64,10 @@
     }
 }
 
-.notice__6e2b9 + .content__5e434 {
-    margin-right: var(--serverlist-offset) !important;
-    overflow-y: scroll !important;  /* Always show scrollbar to prevent width shift */
+.notice__6e2b9 ~ .base__5e434 .guilds__5e434 {
+    right: 0 !important;
+    width: var(--custom-guild-list-width, 72px) !important;
+    box-sizing: border-box !important;
 }
 
 .container__5e434 > div[style]:not(.base__5e434) {
