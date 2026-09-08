@@ -34,13 +34,13 @@
 .guilds__5e434 {
   transform-origin: top right;
   bottom: 0;
-  top: 0;
+  top: var(--custom-app-top-bar-height, 0px) !important;
   right: 0 !important;
   left: auto !important;
   width: var(--custom-guild-list-width, 72px) !important;
   position: fixed !important;
   margin: 0 !important;
-  height: 100vh !important;
+  height: calc(100vh - var(--custom-app-top-bar-height, 0px)) !important;
   overflow-y: auto;
 
   & .itemsContainer_ef3116, & .stack_dbd263 {
