@@ -65,7 +65,8 @@
 }
 
 .notice__6e2b9 + .content__5e434 {
-    margin-right: calc(var(--serverlist-offset) + 17px) !important;
+    margin-right: var(--serverlist-offset) !important;
+    overflow-y: scroll !important;  /* Always show scrollbar to prevent width shift */
 }
 
 .container__5e434 > div[style]:not(.base__5e434) {
