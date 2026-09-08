@@ -64,8 +64,8 @@
     }
 }
 
-.notice__6e2b9 ~ .base__5e434 .guilds__5e434 {
-  right: 17px !important;  /* Adjust this value based on scrollbar width */
+.notice__6e2b9 + .content__5e434 {
+    margin-right: calc(var(--serverlist-offset) + 17px) !important;
 }
 
 .container__5e434 > div[style]:not(.base__5e434) {
