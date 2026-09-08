@@ -1,5 +1,5 @@
 /**
- * @name Right Side Server List
+ * @name Right Side Server List (standalone-file)
  * @author Gibbu (forked by Perlin)
  * @version 3.0.0 + 1.0.0
  * @description Moves the server list from the left to the right of Discord.
@@ -40,7 +40,7 @@
   position: absolute !important;
 
   & .itemsContainer_ef3116, & .stack_dbd263 {
-    flex-direction: column
+    flex-direction: column;
     justify-content: var(--HSL-server-alignment);
   }
 }
