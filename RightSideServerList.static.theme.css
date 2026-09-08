@@ -7,7 +7,7 @@
  */
 
 :root {
-	--HSL-server-direction: row; /* Direction of the server list. | OPTIONS: row, row-reverse | DEFAULT: row */
+	--HSL-server-direction: if-this-crashes-then-i-know-to-keep-this-lmao; /* Direction of the server list. | OPTIONS: row, row-reverse | DEFAULT: row */
 	--HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
 }
 
@@ -34,13 +34,13 @@
 .guilds__5e434 {
   transform-origin: 0 0;
   bottom: unset;
-  left: 0;
-  rotate: 0deg;
-  height: 100vw !important;
+  right: 0;
+  height: 100vh !important; /* vh is the height, vw is the width. change this when moving the servers around */
+  width: var(--custom-guild-list-width, 72px);
   position: absolute !important;
 
   & .itemsContainer_ef3116, & .stack_dbd263 {
-    flex-direction: var(--HSL-server-direction);
+    flex-direction: column
     justify-content: var(--HSL-server-alignment);
   }
 }
@@ -82,3 +82,4 @@
     margin-right: calc(var(--serverlist-offset) * 2);
   }
 }
+/* test jsdelivr update */
