@@ -32,21 +32,26 @@
 }
 
 .guilds__5e434 {
-    transform-origin: 0 0;
-    bottom: unset;
-    top: var(--custom-app-top-bar-height, 0px) !important;
-    right: 0 !important;
-    left: auto !important;
-    rotate: 0deg;
-    height: 100vh !important; /* vh is the height, vw is the width. change this when moving the servers around */
-    width: var(--custom-guild-list-width, 72px) !important;
-    position: fixed !important;
-    margin: 0 !important;
-    
-   & .itemsContainer_ef3116, & .stack_dbd263 {
+  transform-origin: top right;
+  bottom: unset;
+  top: var(--custom-app-top-bar-height, 0px) !important;
+  right: 0 !important;
+  left: auto !important;
+  height: calc(100vh - var(--custom-app-top-bar-height, 0px)) !important;  /* Adjust height */
+  width: var(--custom-guild-list-width, 72px) !important;
+  position: fixed !important;
+  margin: 0 !important;
+
+  & .itemsContainer_ef3116, & .stack_dbd263 {
     flex-direction: column;
     justify-content: var(--HSL-server-alignment);
   }
+}
+
+/* Move out of notice banners [?] */
+.notice__6e2b9 ~ .base__5e434 .guilds__5e434 {
+  top: calc(var(--custom-app-top-bar-height, 0px) + var(--notices-height)) !important;
+  height: calc(100vh - var(--custom-app-top-bar-height, 0px) - var(--notices-height)) !important;
 }
 
 .tree_ef3116 {
