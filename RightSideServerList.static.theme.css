@@ -18,8 +18,14 @@
 }
 
 .base__5e434[data-fullscreen="false"] .content__5e434 {
-    margin-right: var(--serverlist-offset);
-    overflow: visible !important;
+  margin-right: var(--serverlist-offset);
+  margin-top: calc(var(--custom-app-top-bar-height, 0px) + 30px) !important;
+  overflow: visible !important;
+}
+
+/* Check for banner and remove margin */
+.notice__6e2b9 + .content__5e434 {
+  margin-top: var(--custom-app-top-bar-height, 0px) !important;
 }
 
 :fullscreen .content__5e434 {
