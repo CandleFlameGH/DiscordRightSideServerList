@@ -34,7 +34,7 @@
 .guilds__5e434 {
     transform-origin: 0 0;
     bottom: unset;
-    top: 0;
+    top: var(--custom-app-top-bar-height, 0px) !important;
     right: 0 !important;
     left: auto !important;
     rotate: 0deg;
