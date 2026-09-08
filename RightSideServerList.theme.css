@@ -1,0 +1,14 @@
+/**
+ * @name Right Side Server List
+ * @author Gibbu (forked by Perlin)
+ * @version 3.0.0 + 1.0.0
+ * @description Moves the server list from the left to the right of Discord.
+ * @source https://github.com/CandleFlameGH/DiscordRightSideServerList
+ */
+
+@import url('https://candleflaegh.github.io/DiscordRightSideServerList/RightSideServerList.css');
+
+:root {
+	--HSL-server-direction: row; /* Direction of the server list. | OPTIONS: row, row-reverse | DEFAULT: row */
+	--HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
+}
