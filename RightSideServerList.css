@@ -1,72 +1,93 @@
 /* --- src/main.css --- */
 :root {
-  --notices-height: 36px;
-  --serverlist-offset: var(--custom-guild-list-width);
+    --HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
+    --notices-height: 36px;
+    --serverlist-offset: var(--custom-guild-list-width);
 }
 
 .base__5e434[data-fullscreen="false"] .content__5e434 {
-  margin-right: var(--serverlist-offset);
-  overflow: visible !important;
+    margin-right: var(--serverlist-offset);
+    overflow: visible !important;
 }
 
 :fullscreen .content__5e434 {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 
 .sidebar__5e434 {
-  border-radius: 0;
-  overflow: visible !important;
+    border-radius: 0;
+    overflow: visible !important;
 }
 
 .guilds__5e434 {
-  transform-origin: 0 0;
-  bottom: unset;
-  right: 0;
-  height: 100vh !important; /* vh is the height, vw is the width. change this when moving the servers around */
-  width: var(--custom-guild-list-width, 72px);
-  position: absolute !important;
+    transform-origin: top right;
+    bottom: unset;
+    top: var(--custom-app-top-bar-height, 0px) !important;
+    right: 0 !important;
+    left: auto !important;
+    height: calc(100vh - var(--custom-app-top-bar-height, 0px)) !important;
+    width: var(--custom-guild-list-width, 72px) !important;
+    position: fixed !important;
+    margin: 0 !important;
 
-  & .itemsContainer_ef3116, & .stack_dbd263 {
-    flex-direction: column
-    justify-content: var(--HSL-server-alignment);
-  }
+    & .itemsContainer_ef3116, & .stack_dbd263 {
+        flex-direction: column;
+        justify-content: var(--HSL-server-alignment);
+    }
 }
 
 .tree_ef3116 {
-  padding-top: var(--HSL-top-padding, var(--size-sm));
-  justify-content: var(--HSL-server-alignment);
+    padding-top: var(--HSL-top-padding, var(--size-sm));
+    justify-content: var(--HSL-server-alignment);
 }
 
 .wrapper__6e9f8, .folderPreview__48112, .folderIconWrapper__48112, .lowerBadge_cc5dd2, .upperBadge_cc5dd2 {
-  rotate: 0deg;
+    rotate: 0deg;
 }
 
 .childWrapper__6e9f8 {
-  rotate: 0deg;
+    rotate: 0deg;
 }
 
 .notice__6e2b9 {
-  height: var(--notices-height);
+    height: var(--notices-height);
 
-  & + .content__5e434 {
-    --serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
-  }
+  /*  & + .content__5e434 {
+        --serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
+    } */
+}
+
+.notice__6e2b9 ~ .base__5e434 .guilds__5e434 {
+    right: 0 !important;
+    width: var(--custom-guild-list-width, 72px) !important;
+    box-sizing: border-box !important;
+}
+
+.base__5e434 {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+.container__5e434 {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
 }
 
 .container__5e434 > div[style]:not(.base__5e434) {
-  top: calc(var(--serverlist-offset) + var(--custom-app-top-bar-height));
-  pointer-events: none;
-  z-index: 1;
-  position: absolute;
-  width: 100vw !important;
-  height: var(--serverlist-offset) !important;
+    top: calc(var(--serverlist-offset) + var(--custom-app-top-bar-height));
+    pointer-events: none;
+    z-index: 1;
+    position: absolute;
+    width: 100vw !important;
+    height: var(--serverlist-offset) !important;
 
-  & .guilds__5e434 {
-    pointer-events: all;
-  }
+    & .guilds__5e434 {
+        pointer-events: all;
+    }
 
-  & + .base__5e434 .content__5e434 {
-    margin-right: calc(var(--serverlist-offset) * 2);
-  }
+    & + .base__5e434 .content__5e434 {
+        margin-right: calc(var(--serverlist-offset) * 2);
+    }
 }
-/* test jsdelivr update */
