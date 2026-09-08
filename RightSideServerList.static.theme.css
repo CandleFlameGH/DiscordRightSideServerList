@@ -1,17 +1,13 @@
 /**
- * @name Horizontal Server List
- * @author Gibbu
- * @version 3.0.0
- * @description Moves the server list from the left to the top of Discord.
- * @source https://github.com/DiscordStyles/HorizontalServerList
- * @invite ZHthyCw
+ * @name Right Side Server List
+ * @author Gibbu (forked by Perlin)
+ * @version 3.0.0 + 1.0.0
+ * @description Moves the server list from the left to the right of Discord.
+ * @source https://github.com/CandleFlameGH/DiscordRightSideServerList
  */
 
-/* Bottom HorizontalServerList. Simply remove the comments surrounding the @import to enable it. */
-/* @import url("https://discordstyles.github.io/HorizontalServerList/bottomhsl.css"); */
-
 :root {
-	--HSL-server-direction: column; /* Direction of the server list. | OPTIONS: column, column-reverse | DEFAULT: column */
+	--HSL-server-direction: row; /* Direction of the server list. | OPTIONS: row, row-reverse | DEFAULT: row */
 	--HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
 }
 
@@ -22,7 +18,7 @@
 }
 
 .base__5e434[data-fullscreen="false"] .content__5e434 {
-  margin-top: var(--serverlist-offset);
+  margin-right: var(--serverlist-offset);
   overflow: visible !important;
 }
 
@@ -39,7 +35,7 @@
   transform-origin: 0 0;
   bottom: unset;
   left: 0;
-  rotate: -90deg;
+  rotate: 0deg;
   height: 100vw !important;
   position: absolute !important;
 
@@ -55,7 +51,7 @@
 }
 
 .wrapper__6e9f8, .folderPreview__48112, .folderIconWrapper__48112, .lowerBadge_cc5dd2, .upperBadge_cc5dd2 {
-  rotate: 90deg;
+  rotate: 0deg;
 }
 
 .childWrapper__6e9f8 {
@@ -83,6 +79,6 @@
   }
 
   & + .base__5e434 .content__5e434 {
-    margin-top: calc(var(--serverlist-offset) * 2);
+    margin-right: calc(var(--serverlist-offset) * 2);
   }
 }
