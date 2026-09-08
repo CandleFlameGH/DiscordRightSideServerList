@@ -59,9 +59,9 @@
 .notice__6e2b9 {
     height: var(--notices-height);
 
-    & + .content__5e434 {
+  /*  & + .content__5e434 {
         --serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
-    }
+    } */
 }
 
 .notice__6e2b9 ~ .base__5e434 .guilds__5e434 {
