@@ -1,6 +1,5 @@
 /* --- src/main.css --- */
 :root {
-    --HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
     --notices-height: 36px;
     --serverlist-offset: var(--custom-guild-list-width);
 }
