@@ -70,6 +70,18 @@
     box-sizing: border-box !important;
 }
 
+.base__5e434 {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+.container__5e434 {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
 .container__5e434 > div[style]:not(.base__5e434) {
     top: calc(var(--serverlist-offset) + var(--custom-app-top-bar-height));
     pointer-events: none;
