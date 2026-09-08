@@ -49,12 +49,6 @@
   }
 }
 
-/* Move out of the way when a notice banner appears (example: streamer mode enabled) */
-.notice__6e2b9 ~ .base__5e434 .guilds__5e434 {
-  top: calc(var(--custom-app-top-bar-height, 0px) + var(--notices-height)) !important;
-  height: calc(100vh - var(--custom-app-top-bar-height, 0px) - var(--notices-height)) !important;
-}
-
 .tree_ef3116 {
     padding-top: var(--HSL-top-padding, var(--size-sm));
     justify-content: var(--HSL-server-alignment);
@@ -86,6 +80,10 @@
 
   & .guilds__5e434 {
     pointer-events: all;
+  }
+
+  & + .base__5e434 .guilds__5e434 {
+    top: calc(var(--custom-app-top-bar-height, 0px) + var(--serverlist-offset)) !important;
   }
 
   & + .base__5e434 .content__5e434 {
